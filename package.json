@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+      "/home/75632810534/workspace_ionic/app-bandnews-fm-ionic"
+    ]
+  ],
+  "_from": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+  "_id": "cordova-plugin-firebase@2.0.5",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-firebase",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/dpa99c/cordova-plugin-firebase/GH-1057-April-05-android-build-issue/package.json",
+      "gitUrl": "git://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+      "httpsUrl": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+      "shortcut": "github:dpa99c/cordova-plugin-firebase#GH-1057-April-05-android-build-issue",
+      "ssh": "git@github.com:dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+      "sshUrl": "git+ssh://git@github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+    "rawSpec": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+    "scope": null,
+    "spec": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#fed6a1e32a4d256fd498580200741bb5a14127ef",
+  "_shasum": "fc42e36527fcec4b5aaa73dac277b24d0e01aacd",
+  "_shrinkwrap": null,
+  "_spec": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
+  "_where": "/home/75632810534/workspace_ionic/app-bandnews-fm-ionic",
+  "author": {
+    "name": "Robert Arnesson"
+  },
+  "bugs": {
+    "url": "https://github.com/arnesson/cordova-plugin-firebase/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-firebase",
+    "platforms": [
+      "android",
+      "browser",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova plugin for Google Firebase",
+  "devDependencies": {},
+  "gitHead": "fed6a1e32a4d256fd498580200741bb5a14127ef",
+  "homepage": "https://github.com/arnesson/cordova-plugin-firebase#readme",
+  "keywords": [
+    "cordova-android",
+    "cordova-browser",
+    "cordova-ios",
+    "ecosystem:cordova",
+    "firebase",
+    "notifications",
+    "phone auth",
+    "push"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-firebase",
+  "optionalDependencies": {},
+  "readme": "[![Build Status](https://travis-ci.org/arnesson/cordova-plugin-firebase.svg?branch=master)](https://travis-ci.org/arnesson/cordova-plugin-firebase)\n\n# cordova-plugin-firebase\nThis plugin brings push notifications, analytics, event tracking, crash reporting and more from Google Firebase to your Cordova project!  Android and iOS supported.\n\n## Supported Cordova Versions\n- cordova: `>= 6`\n- cordova-android: `>= 6.4`\n- cordova-ios: `>= 4`\n\n## Installation\nInstall the plugin by adding it to your project's config.xml:\n```\n<plugin name=\"cordova-plugin-firebase\" spec=\"^2.0.0\" />\n```\nor by running:\n```\ncordova plugin add cordova-plugin-firebase --save\n```\n\n### Guides\nGreat installation and setup guide by Medium.com - [https://medium.com/@felipepucinelli/how-to-add-push...](https://medium.com/@felipepucinelli/how-to-add-push-notifications-in-your-cordova-application-using-firebase-69fac067e821)\n\n### Setup\nDownload your Firebase configuration files, GoogleService-Info.plist for iOS and google-services.json for android, and place them in the root folder of your cordova project.  Check out this [firebase article](https://support.google.com/firebase/answer/7015592) for details on how to download the files.\n\n```\n- My Project/\n    platforms/\n    plugins/\n    www/\n    config.xml\n    google-services.json       <--\n    GoogleService-Info.plist   <--\n    ...\n```\n\n###### IMPORTANT NOTES\n- This plugin uses a hook (after prepare) that copies the configuration files to the right place, namely `platforms/ios/\\<My Project\\>/Resources` for ios and `platforms/android` for android.\n- Firebase SDK requires the configuration files to be present and valid, otherwise your app will crash on boot or Firebase features won't work.\n\n### PhoneGap Build\nHooks do not work with PhoneGap Build. This means you will have to manually make sure the configuration files are included. One way to do that is to make a private fork of this plugin and replace the placeholder config files (see `src/ios` and `src/android`) with your actual ones, as well as hard coding your app id and api key in `plugin.xml`.\n\n### Google Play Services\nYour build may fail if you are installing multiple plugins that use Google Play Services.  This is caused by the plugins installing different versions of the Google Play Services library.  This can be resolved by installing [cordova-android-play-services-gradle-release](https://github.com/dpa99c/cordova-android-play-services-gradle-release).\n\nIf your build is still failing, you can try installing [cordova-android-firebase-gradle-release](https://github.com/dpa99c/cordova-android-firebase-gradle-release).  For more info, read the following [comment](https://github.com/dpa99c/cordova-plugin-request-location-accuracy/issues/50#issuecomment-390025013) about locking down the specific versions for play services and firebase. It is suggested to use `+` instead of `15.+` to ensure the correct versions are used.\n\n## Google Tag Manager\n\nCheckout our [guide](docs/GOOGLE_TAG_MANAGER.md) for info on setting up Google Tag Manager.\n\n## Configuring Notifications\n\nCheckout our [guide](docs/NOTIFICATIONS.md) for info on configuring notification icons and colors.\n\n## API\n\nSee the full [API](docs/API.md) available for this plugin.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnesson/cordova-plugin-firebase.git"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags && npm publish --verbose",
+    "test": "npm run test:ios && npm run test:android && npm run test:browser",
+    "test:android": "npm run test:cordova@6.5.0:android@6.4.0 && npm run test:cordova@7.1.0:android@7.1.0 && npm run test:cordova@8.0.0:android@7.1.0",
+    "test:browser": "npm run test:cordova@6.5.0:browser@5.0.3 && npm run test:cordova@7.1.0:browser@5.0.3 && npm run test:cordova@8.0.0:browser@5.0.3",
+    "test:cordova@6.5.0:android@6.4.0": "bash ./test/test-default.sh 6.5.0 android 6.4.0 && bash ./test/test-with-3-plugins.sh 6.5.0 android 6.4.0 cordova-plugin-request-location-accuracy cordova-android-play-services-gradle-release cordova-android-firebase-gradle-release",
+    "test:cordova@6.5.0:browser@5.0.3": "bash ./test/test-default.sh 6.5.0 browser 5.0.3",
+    "test:cordova@6.5.0:ios@4.5.4": "bash ./test/test-default.sh 6.5.0 ios 4.5.4",
+    "test:cordova@7.1.0:android@7.1.0": "bash ./test/test-default.sh 7.1.0 android 7.1.0 && bash ./test/test-with-3-plugins.sh 7.1.0 android 7.1.0 cordova-plugin-request-location-accuracy cordova-android-play-services-gradle-release cordova-android-firebase-gradle-release",
+    "test:cordova@7.1.0:browser@5.0.3": "bash ./test/test-default.sh 7.1.0 browser 5.0.3",
+    "test:cordova@7.1.0:ios@4.5.4": "bash ./test/test-default.sh 7.1.0 ios 4.5.4",
+    "test:cordova@8.0.0:android@7.1.0": "bash ./test/test-default.sh 8.0.0 android 7.1.0 && bash ./test/test-with-3-plugins.sh 8.0.0 android 7.1.0 cordova-plugin-request-location-accuracy cordova-android-play-services-gradle-release cordova-android-firebase-gradle-release",
+    "test:cordova@8.0.0:browser@5.0.3": "bash ./test/test-default.sh 8.0.0 browser 5.0.3",
+    "test:cordova@8.0.0:ios@4.5.4": "bash ./test/test-default.sh 8.0.0 ios 4.5.4",
+    "test:ios": "npm run test:cordova@6.5.0:ios@4.5.4 && npm run test:cordova@7.1.0:ios@4.5.4 && npm run test:cordova@8.0.0:ios@4.5.4",
+    "version": "node ./bump-version.js && git add -A plugin.xml"
+  },
+  "version": "2.0.5"
+}
