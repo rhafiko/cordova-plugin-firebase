@@ -3,7 +3,7 @@
 # Attention
 This is a copy from original repository. 
 
-https://github.com/arnesson/cordova-plugin-firebase
+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue
 
  It happened because this version works on Ionic 3. The newer version no longer works with Ionic 3, without upgrade Cordova and other dependencies.
 
