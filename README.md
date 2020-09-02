@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.org/arnesson/cordova-plugin-firebase.svg?branch=master)](https://travis-ci.org/arnesson/cordova-plugin-firebase)
 
+# Attention
+This is a copy from original repository. 
+
+https://github.com/arnesson/cordova-plugin-firebase
+
+ It happened because this version works on Ionic 3. The newer version no longer works with Ionic 3, without upgrade Cordova and other dependencies.
+
 # cordova-plugin-firebase
 This plugin brings push notifications, analytics, event tracking, crash reporting and more from Google Firebase to your Cordova project!  Android and iOS supported.
 
