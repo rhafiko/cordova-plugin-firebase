@@ -2,7 +2,7 @@
   "_args": [
     [
       "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
-      "/home/75632810534/workspace_ionic/app-bandnews-fm-ionic"
+      "/home/75632810534/workspace_ionic/"
     ]
   ],
   "_from": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
@@ -35,7 +35,7 @@
   "_shasum": "fc42e36527fcec4b5aaa73dac277b24d0e01aacd",
   "_shrinkwrap": null,
   "_spec": "git+https://github.com/dpa99c/cordova-plugin-firebase.git#GH-1057-April-05-android-build-issue",
-  "_where": "/home/75632810534/workspace_ionic/app-bandnews-fm-ionic",
+  "_where": "/home/75632810534/workspace_ionic/",
   "author": {
     "name": "Robert Arnesson"
   },
